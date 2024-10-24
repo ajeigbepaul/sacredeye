@@ -2,9 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --font-raleway: "Raleway", sans-serif;
+    --font-satoshi: "Satoshi", sans-serif;
+    --font-geist-mono: "Geist Mono", monospace;
+    --brandcolor: #1f8a70;
+    --white: #ffffff;
+    --black: #181818;
+    --gold: #ff9900;
+    --whitetext: #e4e9e8;
+    --stroke: #666666;
+    --whitesubtext: #888888;
+    --subtext: #888888;
+    --stroke_btn:#B7CFFF;
+
+    --background: var(--white);
+    --foreground: var(--black);
+    --card: var(--white);
+    --card-foreground: var(--black);
+    --primary: var(--brandcolor);
+    --primary-foreground: var(--whitetext);
+    --secondary: var(--gold);
+    --secondary-foreground: var(--black);
+    --border: var(--stroke);
+    --muted: var(--whitesubtext);
+    --muted-foreground: var(--subtext);
+  }
+
+  .dark {
+    --background: var(--black);
+    --foreground: var(--whitetext);
+    --card: var(--black);
+    --card-foreground: var(--whitetext);
+    --primary: var(--brandcolor);
+    --primary-foreground: var(--whitetext);
+    --secondary: var(--gold);
+    --secondary-foreground: var(--whitetext);
+    --border: var(--stroke);
+    --muted: var(--subtext);
+    --muted-foreground: var(--whitesubtext);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +61,15 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

@@ -1,16 +1,28 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import {Raleway } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+const satoshiFont = localFont({
+  src: "./fonts/Satoshi-Regular.otf", // You can use the .otf format here
+  variable: "--font-satoshi",
+  weight: "400",
+});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+const secondaryFont = Raleway({
+  subsets: ["latin"],
+  variable: "--font-raleway",
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -26,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshiFont.variable} ${geistMono.variable} ${secondaryFont.variable} antialiased no-scrollbar`}
       >
         {children}
       </body>
