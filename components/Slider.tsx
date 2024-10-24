@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import BannerInfo from "./BannerInfo";
-import { useState } from "react";
+// import { useState } from "react";
 
 function Slider({
   image,
