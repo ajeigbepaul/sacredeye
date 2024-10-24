@@ -2,12 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import {Raleway } from "next/font/google";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 const satoshiFont = localFont({
   src: "./fonts/Satoshi-Regular.otf", // You can use the .otf format here
   variable: "--font-satoshi",
