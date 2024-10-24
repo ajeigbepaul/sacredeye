@@ -16,11 +16,11 @@ function Slider({
   description: string;
   id:number
 }) {
-  const [loading, setLoading] = useState(true); // State to manage loading
+  // const [setLoading] = useState(true); // State to manage loading
 
-  const handleImageLoad = () => {
-    setLoading(false); // Set loading to false when image loads
-  };
+  // const handleImageLoad = () => {
+  //   setLoading(false); // Set loading to false when image loads
+  // };
   return (
     <div className=" h-full relative w-full scrollbar-none">
       <Image
@@ -29,7 +29,7 @@ function Slider({
         width={1020}
         height={750}
         className="w-full relative scrollbar-none h-full object-cover"
-        onLoad={handleImageLoad} // Handle image load
+        // onLoad={handleImageLoad} // Handle image load
       />
       <div className=" absolute top-0 lg:w-full lg:h-auto grid grid-cols-1">
         <div className="w-full h-full flex items-start">
