@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {Raleway } from "next/font/google";
+import { Raleway,Inter } from "next/font/google";
+import Footer from "@/components/Footer";
 const satoshiFont = localFont({
   src: "./fonts/Satoshi-Regular.otf", // You can use the .otf format here
   variable: "--font-satoshi",
   weight: "400",
+});
+const satoshiFontBold = localFont({
+  src: "./fonts/Satoshi-Bold.otf", // You can use the .otf format here
+  variable: "--font-satoshibold",
+  weight: "700",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -15,6 +21,12 @@ const geistMono = localFont({
 const secondaryFont = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
+  display: "swap",
+  adjustFontFallback: false,
+});
+const secondaryFont2 = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
   adjustFontFallback: false,
 });
@@ -32,9 +44,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshiFont.variable} ${geistMono.variable} ${secondaryFont.variable} antialiased no-scrollbar`}
+        className={`${satoshiFont.variable} ${satoshiFontBold.variable} ${geistMono.variable} ${secondaryFont.variable} ${secondaryFont2.variable} antialiased no-scrollbar bg-[#F8F8F8]`}
       >
-        {children}
+        {" "}
+        <main className="no-scrollbar min-h-screen w-full">
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

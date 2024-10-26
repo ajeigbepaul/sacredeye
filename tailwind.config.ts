@@ -68,6 +68,8 @@ const config: Config = {
       fontFamily: {
         raleway: "var(--font-raleway)", // Raleway
         satoshi: "var(--font-satoshi)", // Satoshi
+        inter:"var(--font-inter)",
+        satoshibold:"var(--font-satoshibold)"
       },
     },
   },

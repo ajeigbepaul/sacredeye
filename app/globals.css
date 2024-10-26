@@ -5,7 +5,9 @@
 @layer base {
   :root {
     --font-raleway: "Raleway", sans-serif;
+    --font-inter:"Inter",sans-serif;
     --font-satoshi: "Satoshi", sans-serif;
+    --font-satoshibold:"Satoshibold, sans-serif";
     --font-geist-mono: "Geist Mono", monospace;
     --brandcolor: #1f8a70;
     --white: #ffffff;

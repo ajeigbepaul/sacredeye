@@ -1,7 +1,19 @@
 import React from "react";
 
-const Button = ({buttonClass,name}:{buttonClass:string,name:string}) => {
-  return <button className={`${buttonClass}`}>{name}</button>;
+const Button = ({
+  buttonClass,
+  name,
+  handleClick,
+}: {
+  buttonClass: string;
+  name: string;
+  handleClick?: () => void;
+}) => {
+  return (
+    <button onClick={handleClick} className={`${buttonClass}`}>
+      {name}
+    </button>
+  );
 };
 
 export default Button;
