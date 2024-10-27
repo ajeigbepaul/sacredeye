@@ -34,13 +34,13 @@ const Form = () => {
     <div className="w-full h-auto p-4 lg:py-12 flex flex-col items-center">
       <form
         onSubmit={handleSubmit}
-        className="max-w-2xl w-full bg-white rounded-3xl p-6 lg:px-12 space-y-6 lg:space-y-8"
+        className="max-w-2xl w-full bg-white rounded-3xl p-6 lg:px-12 space-y-6 lg:space-y-12"
       >
-        <div className="text-center space-y-2">
-          <h1 className="text-black text-2xl lg:text-3xl font-bold">
+        <div className="text-left space-y-4">
+          <h1 className="text-black text-2xl font-raleway lg:text-3xl font-extrabold">
             Join the Sacred Eyes Waitlist
           </h1>
-          <p className="text-[#1D1D1D99] text-sm lg:text-lg">
+          <p className="text-[#1D1D1D99] text-xs lg:text-lg font-satoshi">
             Be the first to know when Sacred Eyes launches
           </p>
         </div>
