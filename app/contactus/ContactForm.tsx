@@ -32,16 +32,16 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full h-auto p-4 lg:py-32 flex flex-col items-center">
+    <div className="w-full h-auto p-4  flex flex-col items-center">
       <form
         onSubmit={handleSubmit}
-        className="max-w-2xl w-full bg-white rounded-3xl p-6 lg:px-12 space-y-6 lg:space-y-8"
+        className="max-w-2xl w-full bg-white border border-[#B8BBD2] rounded-3xl p-6 lg:px-12 space-y-6 lg:space-y-8"
       >
-        <div className="space-y-2 flex items-start flex-col">
-          <h1 className="text-black text-2xl lg:text-4xl font-bold">
+        <div className="space-y-4 flex items-start flex-col">
+          <h1 className="text-black text-2xl lg:text-5xl font-bold">
             Get in Touch
           </h1>
-          <p className="text-[#1D1D1D99] text-sm lg:text-sm">
+          <p className="text-[#1D1D1D99] text-xs lg:text-xs">
             {`   We’re here to help! Reach out to us with any questions or support
             needs, and we’ll get back to you as soon as possible.`}
           </p>
@@ -54,7 +54,7 @@ const ContactForm = () => {
             placeholder="Name"
             value={formData.firstname}
             onChange={handleInputChange}
-            className="w-full p-3 lg:p-4 border border-black rounded-xl"
+            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl"
             required
           />
         </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full p-3 lg:p-4 border border-black rounded-xl"
+            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl"
             required
           />
         </div>
@@ -77,7 +77,7 @@ const ContactForm = () => {
             placeholder="Phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full p-3 lg:p-4 border border-black rounded-xl"
+            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl"
           />
         </div>
 
@@ -86,7 +86,7 @@ const ContactForm = () => {
             name="country"
             value={formData.country}
             onChange={handleSelectChange}
-            className="w-full p-3 lg:p-4  rounded-xl border border-black"
+            className="w-full p-2 lg:p-3  rounded-xl border border-[#B8BBD2]"
           >
             <option value="">How did you find us?</option>
             {/* <option value="USA">United States</option>
@@ -106,14 +106,14 @@ const ContactForm = () => {
 
         <div className="w-full flex items-center space-x-3">
           <div className="flex items-center space-x-2">
-            <Image src={"/phone.svg"} width={20} height={20} alt="email-icon" />
+            <Image src={"/contactphone.svg"} width={24} height={24} alt="email-icon" />
             <div className="text-sm lg:text-base text-white font-medium">
               <h2 className="text-black text-sm font-semibold">PHONE</h2>
               <span className="text-[#007C4D] text-xs">03 5432 1234</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
-            <Image src={"/mail.svg"} width={20} height={20} alt="email-icon" />
+            <Image src={"/contactemail.svg"} width={24} height={24} alt="email-icon" />
             <div className="text-sm lg:text-base text-white font-medium">
               <h2 className="text-black text-sm font-semibold">EMAIL</h2>
               <span className="text-[#007C4D] text-xs">

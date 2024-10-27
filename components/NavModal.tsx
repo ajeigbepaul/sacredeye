@@ -18,7 +18,7 @@ const NavModal = ({ onClose, setTab,tab }: AddCategoryModalProps) => {
       className="fixed px-4 py-4 top-0 left-0 h-screen z-50 w-full bg-[#00000026] flex md:items-start md:justify-center overflow-y-auto"
       onClick={onClose}
     >
-        <div onClick={handleModalClick} className="lg:w-[20%] p-1 rounded-full bg-black gap-4 md:mt-[46px] mb-4 md:-ml-[57%]">
+        <div onClick={handleModalClick} className="lg:w-[20%] p-1 rounded-full bg-black gap-4 md:mt-[50px] mb-4 md:-ml-[67%]">
           <button
             type="button"
             onClick={() => setTab(true)}

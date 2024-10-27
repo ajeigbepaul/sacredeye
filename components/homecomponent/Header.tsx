@@ -3,12 +3,12 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Button from "../Button";
 import NavModal from "../NavModal";
-import MobileNav from "../MobileNav";
+// import MobileNav from "../MobileNav";
 import { useRouter } from "next/navigation";
 
-const Header = ({iscontact}:{iscontact?:boolean}) => {
-  const router = useRouter()
-  const [tab, setTab] = useState<boolean>(false);
+const Header = ({ iscontact }: { iscontact?: boolean }) => {
+  const router = useRouter();
+  const [tab, setTab] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // State to manage modal visibility
   const closeModal = () => {
     setIsModalOpen(false);
@@ -16,42 +16,53 @@ const Header = ({iscontact}:{iscontact?:boolean}) => {
   const handleModal = () => {
     setIsModalOpen((prev) => (prev ? !prev : true));
   };
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggleMenu = () => setIsOpen(!isOpen);
+  // const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="absolute w-full z-50 h-auto top-[8%]  ">
-      <div className="w-full max-w-7xl px-8 mx-auto lg:flex hidden items-center justify-between">
-        <div className="w-[15%]">
+    <header
+      className={`absolute w-full z-50 h-auto ${
+        iscontact ? "top-[6%]" : "top-[8%]"
+      } `}
+    >
+      <div className="w-full max-w-6xl mx-auto flex items-center justify-between">
+        <div className="md:w-[15%] w-[25%]">
           <Image
             src={"/menu.svg"}
             alt="menuicon"
-            height={50}
-            width={50}
+            height={40}
+            width={40}
             className="object-contain cursor-pointer"
             onClick={handleModal}
           />
         </div>
 
-        <div className="w-[70%]  flex items-center justify-center -mt-6">
+        <div
+          className="md:w-[70%] w-[50%] flex items-center justify-center -mt-6 cursor-pointer "
+          onClick={() => router.replace("/")}
+        >
           <Image
-            src={"/logo.svg"}
+            src={`${iscontact ? "/contactlogo.svg" : "/logo.svg"}`}
             alt="menuicon"
-            height={200}
-            width={200}
-            className="object-contain "
+            height={150}
+            width={170}
+            className="object-contain"
           />
         </div>
-        <div className="w-[15%]">
+        <div className="md:w-[15%] w-[25%] flex items-center justify-end">
           <Button
-            handleClick={()=>router.replace("/contactus")}
+            handleClick={() => router.replace("/contactus")}
             name="Contact us"
-            buttonClass={`rounded-full w-[100%] border-2 ${iscontact ? "text-white bg-black":"text-white border-white"}  p-3`}
+            buttonClass={`rounded-full  border-2 ${
+              iscontact
+                ? "text-white bg-black text-xs p-3 lg:w-[80%] w-full"
+                : "text-white border-white p-3 w-[100%]"
+            }  `}
           />
         </div>
         {/* Show the toggle button on both mobile and tablet (small to medium screens) */}
-        <button
+        {/* <button
           onClick={toggleMenu}
           className="text-neutral-400 hover:text-white focus:outline-none flex lg:hidden" // Show on small and medium screens
           aria-label="Toggle menu"
@@ -63,9 +74,9 @@ const Header = ({iscontact}:{iscontact?:boolean}) => {
             width={24}
             height={24}
           />
-        </button>
+        </button> */}
         {/* Mobile and Tablet View */}
-        <MobileNav isopen={isOpen} closeMenu={closeMenu} />
+        {/* <MobileNav isopen={isOpen} closeMenu={closeMenu} /> */}
       </div>
       {isModalOpen && (
         <NavModal
