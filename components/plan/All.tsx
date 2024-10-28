@@ -46,9 +46,9 @@ const All = () => {
             Available for all devices
           </h2>
           <p className="text-sm sm:text-[16px] mb-8 font-satoshi font-medium text-[#1D1D1D99] lg:w-[85%] md:text-left text-center">
-            Sacred Eyes is designed to work seamlessly across all your devices,
+           {` Sacred Eyes is designed to work seamlessly across all your devices,
             providing comprehensive protection no matter where you are or what
-            you're using.
+            you're using.`}
           </p>
           <div className="w-full h-auto grid md:grid-cols-2 grid-cols-1 gap-4 pt-14">
             {buttonArray.map((item, idx) => (
