@@ -51,10 +51,10 @@ const ContactForm = () => {
           <input
             type="text"
             name="firstname"
-            placeholder="Name"
+            placeholder="Name *"
             value={formData.firstname}
             onChange={handleInputChange}
-            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl"
+            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl placeholder:text-xs"
             required
           />
         </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl"
+            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl placeholder:text-xs"
             required
           />
         </div>
@@ -74,10 +74,10 @@ const ContactForm = () => {
           <input
             type="tel"
             name="phone"
-            placeholder="Phone"
+            placeholder="Phone number *"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl"
+            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl placeholder:text-xs"
           />
         </div>
 
@@ -86,7 +86,7 @@ const ContactForm = () => {
             name="country"
             value={formData.country}
             onChange={handleSelectChange}
-            className="w-full p-2 lg:p-3  rounded-xl border border-[#B8BBD2]"
+            className="w-full p-2 lg:p-3  rounded-xl border border-[#B8BBD2] placeholder:text-xs"
           >
             <option value="">How did you find us?</option>
             {/* <option value="USA">United States</option>

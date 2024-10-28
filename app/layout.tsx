@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Raleway,Inter } from "next/font/google";
+import { Raleway, Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import LayoutWithFooter from "@/components/LayoutWithFooter";
+
 const satoshiFont = localFont({
   src: "./fonts/Satoshi-Regular.otf", // You can use the .otf format here
   variable: "--font-satoshi",
@@ -48,8 +50,8 @@ export default function RootLayout({
       >
         {" "}
         <main className="no-scrollbar min-h-screen w-full">
-          {children}
-          <Footer />
+          {/* {children} */}
+          <LayoutWithFooter>{children}</LayoutWithFooter>
         </main>
       </body>
     </html>

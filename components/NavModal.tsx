@@ -22,8 +22,8 @@ const NavModal = ({ onClose, setTab,tab }: AddCategoryModalProps) => {
           <button
             type="button"
             onClick={() => setTab(true)}
-            className={cn("w-1/2 bg-black font-satoshi font-medium p-2 rounded-full text-base", {
-              "bg-white": tab,
+            className={cn("w-1/2 bg-black text-white font-satoshi font-medium p-2 rounded-full text-base", {
+              "bg-white text-black": tab,
             })}
           >
             Home
@@ -31,8 +31,8 @@ const NavModal = ({ onClose, setTab,tab }: AddCategoryModalProps) => {
           <button
             type="button"
             onClick={() => setTab(false)}
-            className={cn("w-1/2 bg-black p-2 rounded-full font-satoshi font-medium text-base", {
-              "bg-white": !tab,
+            className={cn("w-1/2 bg-black text-white p-2 rounded-full font-satoshi font-medium text-base", {
+              "bg-white text-black": !tab,
             })}
           >
             Pricing

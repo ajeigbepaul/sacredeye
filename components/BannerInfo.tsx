@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,7 @@ const BannerInfo = ({
   description: string;
   id: number;
 }) => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     // <div className="h-auto w-full max-w-7xl mx-auto flex flex-col items-center space-y-6 py-12 px-4 lg:py-52 lg:px-6 bg-orange-300">
     //   <div className="flex flex-col items-center justify-center text-center space-y-2 px-2 lg:px-4">
@@ -98,11 +98,12 @@ const BannerInfo = ({
 
       <div className="w-full flex items-center justify-center space-x-4 pt-4 sm:pt-6 px-4 lg:px-0 md:px-0">
         <Button
-          handleClick={()=>router.replace("/waitinglist")}
+          handleClick={() => router.replace("/waitinglist")}
           name="Join the waitlist"
           buttonClass="bg-white text-black rounded-full p-3 sm:p-4 w-[60%] sm:w-[40%] md:w-[25%] lg:w-[20%]"
         />
         <Button
+          handleClick={() => router.replace("/plan")}
           name="Pricing"
           buttonClass="border border-white text-white rounded-full p-3 sm:p-4 w-[60%] sm:w-[40%] md:w-[25%] lg:w-[20%]"
         />

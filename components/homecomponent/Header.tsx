@@ -6,7 +6,13 @@ import NavModal from "../NavModal";
 // import MobileNav from "../MobileNav";
 import { useRouter } from "next/navigation";
 
-const Header = ({ iscontact }: { iscontact?: boolean }) => {
+const Header = ({
+  iscontact,
+  isplan,
+}: {
+  iscontact?: boolean;
+  isplan?: boolean;
+}) => {
   const router = useRouter();
   const [tab, setTab] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // State to manage modal visibility
@@ -16,14 +22,11 @@ const Header = ({ iscontact }: { iscontact?: boolean }) => {
   const handleModal = () => {
     setIsModalOpen((prev) => (prev ? !prev : true));
   };
-  // const [isOpen, setIsOpen] = useState(false);
-  // const toggleMenu = () => setIsOpen(!isOpen);
-  // const closeMenu = () => setIsOpen(false);
 
   return (
     <header
       className={`absolute w-full z-50 h-auto ${
-        iscontact ? "top-[6%]" : "top-[8%]"
+        iscontact ? "top-[6%]" : isplan ? "top-16" : "top-[8%]"
       } `}
     >
       <div className="w-full max-w-6xl mx-auto flex items-center justify-between">
@@ -43,7 +46,13 @@ const Header = ({ iscontact }: { iscontact?: boolean }) => {
           onClick={() => router.replace("/")}
         >
           <Image
-            src={`${iscontact ? "/contactlogo.svg" : "/logo.svg"}`}
+            src={`${
+              iscontact
+                ? "/contactlogo.svg"
+                : isplan
+                ? "/contactlogo.svg"
+                : "/logo.svg"
+            }`}
             alt="menuicon"
             height={150}
             width={170}
@@ -56,6 +65,8 @@ const Header = ({ iscontact }: { iscontact?: boolean }) => {
             name="Contact us"
             buttonClass={`rounded-full  border-2 ${
               iscontact
+                ? "text-white bg-black text-xs p-3 lg:w-[80%] w-full"
+                : isplan
                 ? "text-white bg-black text-xs p-3 lg:w-[80%] w-full"
                 : "text-white border-white p-3 w-[100%]"
             }  `}

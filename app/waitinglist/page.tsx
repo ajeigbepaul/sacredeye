@@ -9,7 +9,7 @@ const WaitingList = () => {
   return (
     <section className="min-h-screen w-full">
       <div className="w-full bg-white h-[12vh] items-center px-14 flex space-x-12">
-        <FaArrowLeft onClick={() => router.back()} />
+        <FaArrowLeft onClick={() => router.back()} className="cursor-pointer" />
         <div
           className="flex items-center space-x-2 cursor-pointer"
           onClick={() => router.replace("/")}

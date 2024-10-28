@@ -46,65 +46,66 @@ const Form = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-          <div className="flex flex-col">
-            <label className="text-sm lg:text-base">First name</label>
+          <div className="flex flex-col space-y-2">
+            <label className="text-xs lg:text-sm">First name</label>
             <input
               type="text"
               name="firstname"
-              placeholder="First Name"
+              placeholder="Lucas"
+              
               value={formData.firstname}
               onChange={handleInputChange}
-              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl"
+              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm "
               required
             />
           </div>
-          <div className="flex flex-col">
-            <label className="text-sm lg:text-base">Last name</label>
+          <div className="flex flex-col space-y-2">
+            <label className="text-xs lg:text-sm">Last name</label>
             <input
               type="text"
               name="lastname"
-              placeholder="Last Name"
+              placeholder="Eniola"
               value={formData.lastname}
               onChange={handleInputChange}
-              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl"
+              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
               required
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-          <div className="flex flex-col">
-            <label className="text-sm lg:text-base">Email</label>
+          <div className="flex flex-col space-y-2">
+            <label className="text-xs lg:text-sm">Email</label>
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder="Lucas.eniola@gmail.com "
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl"
+              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
               required
             />
           </div>
-          <div className="flex flex-col">
-            <label className="text-sm lg:text-base">Phone</label>
+          <div className="flex flex-col space-y-2">
+            <label className="text-xs lg:text-sm">Phone</label>
             <input
               type="tel"
               name="phone"
-              placeholder="Phone"
+              placeholder="0816 479 0387"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl"
+              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
             />
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <label className="text-sm lg:text-base">Select country</label>
+        <div className="flex flex-col space-y-2">
+          <label className="text-xs lg:text-sm">Select country</label>
           <select
             name="country"
             value={formData.country}
             onChange={handleSelectChange}
-            className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl"
+            className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
           >
             <option value="">Choose a country</option>
             <option value="USA">United States</option>
@@ -114,15 +115,15 @@ const Form = () => {
           </select>
         </div>
 
-        <div className="flex flex-col">
-          <label className="text-sm lg:text-base">Type of organization</label>
+        <div className="flex flex-col space-y-2">
+          <label className="text-xs lg:text-sm">Type of organization</label>
           <input
             type="text"
             name="organization"
-            placeholder="Organization Type"
+            placeholder="Live streaming company"
             value={formData.organization}
             onChange={handleInputChange}
-            className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl"
+            className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
           />
         </div>
 

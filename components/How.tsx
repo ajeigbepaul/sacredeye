@@ -11,7 +11,7 @@ const How = () => {
             How Sacred Eyes Protects Your Digital World
           </h2>
           <p className="text-base sm:text-lg font-satoshi font-medium text-[#1D1D1D99]">
-            acred Eyes simplifies online protection by seamlessly filtering
+            Sacred Eyes simplifies online protection by seamlessly filtering
             unwanted content and managing screen time. With just a few clicks,
             you can set up personalized filters, block harmful websites, and
             monitor online activity across all your devices.
