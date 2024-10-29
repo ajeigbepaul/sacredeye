@@ -23,7 +23,7 @@ const Footer = () => {
               <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Image src={"/mail.svg"} width={20} height={20} alt="email-icon" />
                 <h2 className="text-sm lg:text-base text-white font-medium">
-                  hello@sacredeyes.org
+                  hello@sacredeyes.app
                 </h2>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2">

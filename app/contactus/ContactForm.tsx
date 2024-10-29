@@ -8,7 +8,7 @@ const ContactForm = () => {
     lastname: "",
     email: "",
     phone: "",
-    country: "",
+    how: "",
     organization: "",
   });
 
@@ -18,7 +18,7 @@ const ContactForm = () => {
   };
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFormData((prevData) => ({ ...prevData, country: e.target.value }));
+    setFormData((prevData) => ({ ...prevData, how: e.target.value }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -83,8 +83,8 @@ const ContactForm = () => {
 
         <div className="flex flex-col">
           <select
-            name="country"
-            value={formData.country}
+            name="how"
+            value={formData.how}
             onChange={handleSelectChange}
             className="w-full p-2 lg:p-3  rounded-xl border border-[#B8BBD2] placeholder:text-xs"
           >
@@ -109,7 +109,7 @@ const ContactForm = () => {
             <Image src={"/contactphone.svg"} width={24} height={24} alt="email-icon" />
             <div className="text-sm lg:text-base text-white font-medium">
               <h2 className="text-black text-sm font-semibold">PHONE</h2>
-              <span className="text-[#007C4D] text-xs">03 5432 1234</span>
+              <span className="text-[#007C4D] text-xs">08068097620</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -117,7 +117,7 @@ const ContactForm = () => {
             <div className="text-sm lg:text-base text-white font-medium">
               <h2 className="text-black text-sm font-semibold">EMAIL</h2>
               <span className="text-[#007C4D] text-xs">
-                hello@sacredeyes.org
+                hello@sacredeyes.app
               </span>
             </div>
           </div>

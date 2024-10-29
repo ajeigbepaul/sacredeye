@@ -9,7 +9,7 @@ const ContactUs = () => {
       <Header iscontact />
 
       <div className="w-full max-w-6xl mx-auto md:h-full h-auto">
-        <div className="w-full grid md:grid-cols-2 grid-cols-1 lg:py-52 md:py-40 py-32">
+        <div className="w-full grid md:grid-cols-2 grid-cols-1 lg:py-60 md:py-40 py-32">
           <div className="w-full">
             <ContactForm />
           </div>

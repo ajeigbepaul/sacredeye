@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Header from "../homecomponent/Header";
-// import Plans from "./Plans";
 import { cn } from "@/lib/utils";
 
 const PlanHome = () => {

@@ -40,14 +40,14 @@ const Form = () => {
           <h1 className="text-black text-2xl font-raleway lg:text-3xl font-extrabold">
             Join the Sacred Eyes Waitlist
           </h1>
-          <p className="text-[#1D1D1D99] text-xs lg:text-lg font-satoshi">
+          <p className="text-[#1D1D1D99] text-xs lg:text-lg font-satoshi font-medium">
             Be the first to know when Sacred Eyes launches
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
           <div className="flex flex-col space-y-2">
-            <label className="text-xs lg:text-sm">First name</label>
+            <label className="text-xs lg:text-sm text-black font-satoshi">First name</label>
             <input
               type="text"
               name="firstname"
@@ -60,7 +60,7 @@ const Form = () => {
             />
           </div>
           <div className="flex flex-col space-y-2">
-            <label className="text-xs lg:text-sm">Last name</label>
+            <label className="text-xs lg:text-sm text-black font-satoshi">Last name</label>
             <input
               type="text"
               name="lastname"
@@ -75,7 +75,7 @@ const Form = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
           <div className="flex flex-col space-y-2">
-            <label className="text-xs lg:text-sm">Email</label>
+            <label className="text-xs lg:text-sm text-black font-satoshi">Email</label>
             <input
               type="email"
               name="email"
@@ -87,7 +87,7 @@ const Form = () => {
             />
           </div>
           <div className="flex flex-col space-y-2">
-            <label className="text-xs lg:text-sm">Phone</label>
+            <label className="text-xs lg:text-sm text-black font-satoshi">Phone</label>
             <input
               type="tel"
               name="phone"
@@ -100,7 +100,7 @@ const Form = () => {
         </div>
 
         <div className="flex flex-col space-y-2">
-          <label className="text-xs lg:text-sm">Select country</label>
+          <label className="text-xs lg:text-sm text-black font-satoshi">Select country</label>
           <select
             name="country"
             value={formData.country}
@@ -108,6 +108,7 @@ const Form = () => {
             className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
           >
             <option value="">Choose a country</option>
+            <option value="NG">Nigeria</option>
             <option value="USA">United States</option>
             <option value="Canada">Canada</option>
             <option value="UK">United Kingdom</option>
@@ -116,7 +117,7 @@ const Form = () => {
         </div>
 
         <div className="flex flex-col space-y-2">
-          <label className="text-xs lg:text-sm">Type of organization</label>
+          <label className="text-xs lg:text-sm text-black font-satoshi">Type of organization</label>
           <input
             type="text"
             name="organization"

@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import NavModal from "../NavModal";
-// import MobileNav from "../MobileNav";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Header = ({
   iscontact,
@@ -14,8 +13,12 @@ const Header = ({
   isplan?: boolean;
 }) => {
   const router = useRouter();
+  const pathname = usePathname();
   const [tab, setTab] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // State to manage modal visibility
+  useEffect(() => {
+    pathname === "/plan" ? setTab(false) : setTab(true);
+  }, []);
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -26,7 +29,11 @@ const Header = ({
   return (
     <header
       className={`absolute w-full z-50 h-auto ${
-        iscontact ? "top-[6%]" : isplan ? "top-16" : "top-[8%]"
+        iscontact
+          ? "lg:top-[7%] md:top-[9%] top-[4%] "
+          : isplan
+          ? "md:top-[76px] top-[28px]"
+          : "lg:top-[9%] md:top-[12%] top-[6%]"
       } `}
     >
       <div className="w-full max-w-6xl mx-auto flex items-center justify-between">
@@ -42,7 +49,7 @@ const Header = ({
         </div>
 
         <div
-          className="md:w-[70%] w-[50%] flex items-center justify-center -mt-6 cursor-pointer "
+          className="md:w-[70%] w-[50%] flex items-center justify-center -mt-[22px] cursor-pointer "
           onClick={() => router.replace("/")}
         >
           <Image
@@ -72,22 +79,6 @@ const Header = ({
             }  `}
           />
         </div>
-        {/* Show the toggle button on both mobile and tablet (small to medium screens) */}
-        {/* <button
-          onClick={toggleMenu}
-          className="text-neutral-400 hover:text-white focus:outline-none flex lg:hidden" // Show on small and medium screens
-          aria-label="Toggle menu"
-        >
-          <Image
-            src={"/menu.svg"}
-            alt="toggle"
-            className="w-6 h-6"
-            width={24}
-            height={24}
-          />
-        </button> */}
-        {/* Mobile and Tablet View */}
-        {/* <MobileNav isopen={isOpen} closeMenu={closeMenu} /> */}
       </div>
       {isModalOpen && (
         <NavModal

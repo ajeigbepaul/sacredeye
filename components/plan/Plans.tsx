@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Button from "../Button";
-// import Seperator from "../Seperator";
 
 const Plans = () => {
   const plansData = [

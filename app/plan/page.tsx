@@ -3,6 +3,7 @@ import PlanHome from "@/components/plan/PlanHome";
 import Plans from "@/components/plan/Plans";
 import Featuresplans from "@/components/plan/Featuresplans";
 import All from "@/components/plan/All";
+import Faq from "@/components/plan/Faq";
 // import ContactForm from "./ContactForm";
 
 const Plan = () => {
@@ -12,6 +13,7 @@ const Plan = () => {
       <Plans/>
       <Featuresplans/>
       <All/>
+      <Faq/>
     </section>
   );
 };
