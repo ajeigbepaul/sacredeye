@@ -22,8 +22,14 @@ const Faq = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqData.map((item, idx) => (
               <AccordionItem key={idx} value={item.question}>
-                <AccordionTrigger className="text-[#333333] font-bold font-satoshi md:text-lg text-[14px] text-left ">{item?.question}</AccordionTrigger>
-                <AccordionContent className="text-[#1D1D1D99] md:text-sm text-xs">{item?.answer}</AccordionContent>
+                <AccordionTrigger className="text-[#333333] font-bold font-satoshi md:text-lg text-[14px] text-left ">
+                  {idx + 1}
+                  {". "}
+                  {item?.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-[#1D1D1D99] md:text-sm text-xs">
+                  {item?.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
