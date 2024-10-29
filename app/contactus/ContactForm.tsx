@@ -54,7 +54,7 @@ const ContactForm = () => {
             placeholder="Name *"
             value={formData.firstname}
             onChange={handleInputChange}
-            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl placeholder:text-xs"
+            className="w-full p-2 lg:p-3 text-black border border-[#B8BBD2] rounded-xl placeholder:text-xs"
             required
           />
         </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl placeholder:text-xs"
+            className="w-full p-2 lg:p-3 border text-black border-[#B8BBD2] rounded-xl placeholder:text-xs"
             required
           />
         </div>
@@ -77,7 +77,7 @@ const ContactForm = () => {
             placeholder="Phone number *"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full p-2 lg:p-3 border border-[#B8BBD2] rounded-xl placeholder:text-xs"
+            className="w-full p-2 lg:p-3 border text-black border-[#B8BBD2] rounded-xl placeholder:text-xs"
           />
         </div>
 

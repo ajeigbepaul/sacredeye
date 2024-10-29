@@ -82,7 +82,7 @@ const Form = () => {
               placeholder="Lucas.eniola@gmail.com "
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
+              className="w-full p-3 lg:p-4 bg-[#F7F7F7] text-black rounded-xl placeholder:text-sm"
               required
             />
           </div>
@@ -94,7 +94,7 @@ const Form = () => {
               placeholder="0816 479 0387"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
+              className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl text-black placeholder:text-sm"
             />
           </div>
         </div>
@@ -105,7 +105,7 @@ const Form = () => {
             name="country"
             value={formData.country}
             onChange={handleSelectChange}
-            className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
+            className="w-full p-3 lg:p-4 bg-[#F7F7F7] text-black rounded-xl placeholder:text-sm"
           >
             <option value="">Choose a country</option>
             <option value="NG">Nigeria</option>
@@ -124,7 +124,7 @@ const Form = () => {
             placeholder="Live streaming company"
             value={formData.organization}
             onChange={handleInputChange}
-            className="w-full p-3 lg:p-4 bg-[#F7F7F7] rounded-xl placeholder:text-sm"
+            className="w-full p-3 lg:p-4 text-black bg-[#F7F7F7] rounded-xl placeholder:text-sm"
           />
         </div>
 
