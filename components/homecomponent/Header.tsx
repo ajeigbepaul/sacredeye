@@ -17,8 +17,8 @@ const Header = ({
   const [tab, setTab] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // State to manage modal visibility
   useEffect(() => {
-    pathname === "/plan" ? setTab(false) : setTab(true);
-  }, []);
+    setTab(pathname !== "/plan"); // Directly set the tab state based on pathname
+  }, [pathname]);
   const closeModal = () => {
     setIsModalOpen(false);
   };
