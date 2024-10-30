@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
+// import Link from "next/link";
 
 const Feature = () => {
   return (
@@ -18,12 +20,17 @@ const Feature = () => {
           </p>
           <div className="w-full flex justify-center lg:justify-start">
             <Button
+              handleClick={() => {
+                document
+                  .getElementById("benefits")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               name="Our Features"
               buttonClass="p-4 rounded-full bg-[#007C4D] text-white w-full sm:w-1/2 md:w-1/3 lg:w-[30%]"
             />
           </div>
         </div>
-        
+
         <div className="w-full flex relative items-center justify-center h-full">
           <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[75%] h-full relative">
             <div className="lg:w-full md:w-full h-full">

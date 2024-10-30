@@ -1,14 +1,16 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Button from "../Button";
-
+import { useRouter } from "next/navigation";
 const Plans = () => {
+  const router = useRouter();
   const plansData = [
     {
       icon: "/basic.svg",
       title: "Basics",
       subtitle: "Families/Home",
-      buttonname: "Get Started",
+      buttonname: "Join the waitlist",
       cardColor: "#ffffff",
       otherinfo: [
         "Up to 25 devices or 3,75 M requests / month",
@@ -23,7 +25,7 @@ const Plans = () => {
       icon: "/pro.svg",
       title: "Pro",
       subtitle: "Schools/Universities",
-      buttonname: "Submit a request",
+      buttonname: "Join the waitlist",
       cardColor: "#E3FFF4",
       otherinfo: [
         "Up to 100 devices or 7.5 M requests / month",
@@ -38,7 +40,7 @@ const Plans = () => {
       icon: "/basic.svg",
       title: "Enterprise",
       subtitle: "Organizations",
-      buttonname: "Submit a request",
+      buttonname: "Join the waitlist",
       cardColor: "#ffffff",
       otherinfo: [
         "Up to 100 devices or 15 M requests / month",
@@ -60,9 +62,11 @@ const Plans = () => {
               className={`w-full flex flex-col border border-[#E7EBFF] py-8 p-8 rounded-xl`}
               style={{ backgroundColor: item?.cardColor }}
             >
-              <div className={` w-full border-b ${
-                idx === 1 ? "border-[#1892644D]" : "border-[#E7EBFF]"
-              } flex flex-col space-y-2 pb-4`}>
+              <div
+                className={` w-full border-b ${
+                  idx === 1 ? "border-[#1892644D]" : "border-[#E7EBFF]"
+                } flex flex-col space-y-2 pb-4`}
+              >
                 <Image
                   src={item?.icon}
                   alt="planicon"
@@ -92,11 +96,12 @@ const Plans = () => {
                 ))}
               </div>
               <Button
+                handleClick={() => router.push("/waitinglist")}
                 name={item?.buttonname}
-                buttonClass={`p-2 rounded-full ${
+                buttonClass={`p-2 rounded-full  ${
                   idx === 1
-                    ? "bg-[#007C4D] text-white"
-                    : "border-2 border-black "
+                    ? "bg-[#007C4D] text-white hover:bg-[#009B5B]"
+                    : "border-2 border-black text-black hover:border-[#009B5B] "
                 } w-[full]`}
               />
             </div>

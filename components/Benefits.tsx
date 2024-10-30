@@ -49,7 +49,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="w-full h-auto bg-white py-12 sm:py-16 md:py-20 lg:py-24 flex items-center justify-center">
+    <section id="benefits" className="w-full h-auto bg-white py-12 sm:py-16 md:py-20 lg:py-24 flex items-center justify-center">
       <div className="w-full max-w-5xl px-4 mx-auto space-y-12 flex flex-col items-center">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center space-y-4">

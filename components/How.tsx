@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
@@ -18,6 +19,11 @@ const How = () => {
           </p>
           <div className="w-full flex justify-center lg:justify-start">
             <Button
+              handleClick={() => {
+                document
+                  .getElementById("benefits")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               name="Our Features"
               buttonClass="p-4 rounded-full bg-[#007C4D] text-white w-full sm:w-1/2 md:w-1/3 lg:w-[30%]"
             />
