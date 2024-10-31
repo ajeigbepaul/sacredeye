@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import NavModal from "../NavModal";
 import { useRouter, usePathname } from "next/navigation";
+import MobileNav from "../MobileNav";
 
 const Header = ({
   iscontact,
@@ -15,7 +16,9 @@ const Header = ({
   const router = useRouter();
   const pathname = usePathname();
   const [tab, setTab] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // State to manage modal visibility
+  const toggleMenu = () => setIsOpen(!isOpen);
   useEffect(() => {
     setTab(pathname !== "/plan"); // Directly set the tab state based on pathname
   }, [pathname]);
@@ -25,6 +28,7 @@ const Header = ({
   const handleModal = () => {
     setIsModalOpen((prev) => (prev ? !prev : true));
   };
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <header
@@ -37,7 +41,7 @@ const Header = ({
       } `}
     >
       <div className="w-full max-w-6xl mx-auto flex items-center justify-between">
-        <div className="md:w-[15%] w-[25%]">
+        <div className="md:w-[15%] w-[25%] md:flex hidden">
           <Image
             src={"/menu.svg"}
             alt="menuicon"
@@ -49,7 +53,7 @@ const Header = ({
         </div>
 
         <div
-          className="md:w-[70%] w-[50%] flex items-center justify-center -mt-[22px] cursor-pointer "
+          className="md:w-[70%] w-[50%] md:flex hidden items-center justify-center -mt-[22px] cursor-pointer "
           onClick={() => router.replace("/")}
         >
           <Image
@@ -66,7 +70,8 @@ const Header = ({
             className="object-contain"
           />
         </div>
-        <div className="md:w-[15%] w-[25%] flex items-center justify-end">
+
+        <div className="md:w-[15%] w-[25%] md:flex hidden items-center justify-end">
           <Button
             handleClick={() => router.replace("/contactus")}
             name="Contact us"
@@ -80,6 +85,21 @@ const Header = ({
           />
         </div>
       </div>
+      <div className="flex items-center justify-end pr-4">
+        <button
+          onClick={toggleMenu}
+          className="text-neutral-400 hover:text-white focus:outline-none flex md:hidden z-50" // Show on small and medium screens
+          aria-label="Toggle menu"
+        >
+          <Image
+            src={"/menu.svg"}
+            alt="toggle"
+            className="w-8 h-8"
+            width={24}
+            height={24}
+          />
+        </button>
+      </div>
       {isModalOpen && (
         <NavModal
           isOpen={isModalOpen}
@@ -88,6 +108,8 @@ const Header = ({
           onClose={closeModal}
         />
       )}
+      {/* Mobile and Tablet View */}
+      <MobileNav isopen={isOpen} closeMenu={closeMenu} />
     </header>
   );
 };

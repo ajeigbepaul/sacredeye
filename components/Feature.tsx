@@ -26,7 +26,7 @@ const Feature = () => {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               name="Our Features"
-              buttonClass="p-4 rounded-full bg-[#007C4D] text-white w-full sm:w-1/2 md:w-1/3 lg:w-[30%]"
+              buttonClass="md:p-4 p-2 rounded-full bg-[#007C4D] text-white w-[80%] sm:w-1/2 md:w-1/3 lg:w-[30%]"
             />
           </div>
         </div>
