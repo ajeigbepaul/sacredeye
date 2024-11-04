@@ -49,7 +49,7 @@ export default function RootLayout({
         className={`${satoshiFont.variable} ${satoshiFontBold.variable} ${geistMono.variable} ${secondaryFont.variable} ${secondaryFont2.variable} antialiased no-scrollbar bg-[#F8F8F8]`}
       >
         {" "}
-        <main className="no-scrollbar min-h-screen w-full">
+        <main className="no-scrollbar min-h-screen w-full overflow-x-hidden">
           {/* {children} */}
           <LayoutWithFooter>{children}</LayoutWithFooter>
         </main>

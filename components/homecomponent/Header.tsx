@@ -85,7 +85,20 @@ const Header = ({
           />
         </div>
       </div>
-      <div className="flex items-center justify-end pr-4">
+      {/* Mobile view */}
+      <div className="flex items-center justify-between px-4 md:hidden">
+        <div
+          className="w-[30%] cursor-pointer "
+          onClick={() => router.replace("/")}
+        >
+          <Image
+            src={`/logo.svg`}
+            alt="menuicon"
+            height={150}
+            width={170}
+            className="object-contain"
+          />
+        </div>
         <button
           onClick={toggleMenu}
           className="text-neutral-400 hover:text-white focus:outline-none flex md:hidden z-50" // Show on small and medium screens

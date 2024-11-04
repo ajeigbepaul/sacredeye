@@ -9,16 +9,16 @@ const Feature = () => {
     <section className="h-auto w-full flex items-center justify-center bg-[#F8F8F8] py-24">
       <div className="w-full max-w-5xl h-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
         <div className="w-full h-full flex items-center flex-col justify-center space-y-7 text-center lg:text-left">
-          <h2 className="font-raleway text-black text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight lg:leading-snug">
+          <h2 className="font-raleway text-black text-3xl text-left sm:text-4xl lg:text-5xl font-bold leading-tight lg:leading-snug">
             Guard what matters most and Stay in Control
           </h2>
-          <p className="text-base sm:text-lg font-satoshi font-medium text-[#1D1D1D99]">
+          <p className="text-base sm:text-lg font-satoshi text-left font-medium text-[#1D1D1D99]">
             Threat protection and content filtering should be easy. Sacred Eyes
             offers powerful tools to filter content, manage screen time, and
             monitor activity, giving you peace of mind and control over what
             matters most.
           </p>
-          <div className="w-full flex justify-center lg:justify-start">
+          <div className="w-full flex justify-start lg:justify-start">
             <Button
               handleClick={() => {
                 document
@@ -26,7 +26,7 @@ const Feature = () => {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               name="Our Features"
-              buttonClass="md:p-4 p-2 rounded-full bg-[#007C4D] text-white w-[80%] sm:w-1/2 md:w-1/3 lg:w-[30%]"
+              buttonClass="md:p-4 p-4 rounded-full bg-[#007C4D] text-white w-[50%] sm:w-1/2 md:w-1/3 lg:w-[30%]"
             />
           </div>
         </div>

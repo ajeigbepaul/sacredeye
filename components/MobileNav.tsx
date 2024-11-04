@@ -1,8 +1,7 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-// import Button from "./Button";
 import Image from "next/image";
-// import NavLinks from "./NavLinks";
+import Link from "next/link";
 
 const MobileNav = ({
   closeMenu,
@@ -30,13 +29,15 @@ const MobileNav = ({
       <nav className="p-0 h-full w-full">
         <div className="h-full overflow-y-auto w-full">
           <div className="w-full max-w-7xl px-8 mx-auto flex items-start flex-col justify-between">
-            <Image
-              src={"/contactlogo.svg"}
-              alt="menuicon"
-              height={200}
-              width={200}
-              className="object-contain "
-            />
+            <Link href={"/"}>
+              <Image
+                src={"/contactlogo.svg"}
+                alt="menuicon"
+                height={100}
+                width={150}
+                className="object-contain "
+              />
+            </Link>
           </div>
         </div>
       </nav>

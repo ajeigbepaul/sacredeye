@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="w-full max-w-5xl mx-auto h-full flex flex-col items-center py-8 px-4 lg:px-0">
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-8 lg:space-y-0 h-full">
           {/* Contact Information Section */}
-          <div className="w-full lg:w-[40%] h-full py-6 lg:py-10 flex flex-col items-center lg:items-start space-y-6">
+          <div className="w-full lg:w-[40%] h-full py-6 lg:py-10 flex flex-col items-start lg:items-start space-y-6">
             <div className="w-16 h-16 mb-6 lg:mb-2">
               <Image
                 src={"/eye.svg"}
@@ -19,8 +19,8 @@ const Footer = () => {
                 className="object-contain"
               />
             </div>
-            <div className="flex flex-col space-y-4 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start space-x-2">
+            <div className="flex flex-col space-y-4 text-left lg:text-left items-start">
+              <div className="flex items-center justify-start lg:justify-start space-x-2">
                 <Image src={"/mail.svg"} width={20} height={20} alt="email-icon" />
                 <h2 className="text-sm lg:text-base text-white font-medium">
                   hello@sacredeyes.app
@@ -43,7 +43,7 @@ const Footer = () => {
 
           {/* Links Section */}
           <div className="w-full lg:w-[60%] py-6 lg:py-10">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-4 px-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 px-2">
               {/* Home Links */}
               <div className="text-white flex flex-col gap-2 mb-4 lg:mb-8">
                 <p className="font-semibold">Home</p>
